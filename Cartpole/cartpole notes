@@ -1,0 +1,29 @@
+inverted pendulumn simulation 
+LQR controller
+
+How to launch Cartpole assignment & fix error w package:
+#in tos terminal type navigate to proper location
+cd catkin_ws/src
+# see if invpend_experiement is there
+ls 
+# if not, clone from github
+gitclone https://github.com/linZHank/invpend_experiment.git
+#build the actual module
+catkin build
+#source with bash 
+source ~/catkin_ws/devel/setup.bash
+
+<<close the terminal once done, open a new terminal>>
+#test to see if model is working:
+roslaunch invpend_description invpend_rviz.launch
+
+# if you get an error with missing joint_state_publisher_gui :
+<< close terminal and open a new one>>
+sudo apt update
+# let this run -- may take a while
+sudo apt install ros-melodic-joint-state-publisher-gui
+# let this run -- may take a while
+<< close terminal and open a new one >> 
+
+#test to see if model is working:
+roslaunch invpend_description invpend_rviz.launch
