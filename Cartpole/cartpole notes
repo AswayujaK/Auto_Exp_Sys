@@ -3,7 +3,7 @@ LQR controller
 
 --------------------------------------------------------------------------------------
 Fix for error in launching Cartpole model: 'missing joint_state_publisher_gui'
-#in tos terminal type navigate to proper location
+#in ros terminal navigate to proper location
 cd catkin_ws/src
 # see if invpend_experiement is there
 ls 
