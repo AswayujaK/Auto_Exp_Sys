@@ -1,5 +1,5 @@
 inverted pendulumn simulation 
-LQR controller
+PID control
 
 --------------------------------------------------------------------------------------
 Fix for error in launching Cartpole model: 'missing joint_state_publisher_gui'
@@ -31,3 +31,13 @@ roslaunch invpend_description invpend_rviz.launch
 
 solution from: https://answers.ros.org/question/344992/missing-joint_state_publisher_gui-when-l-run-displaylaunch/
 --------------------------------------------------------------------------------------------------------------------------
+Fix for error when using 'roslaunch invpend_control load_invpend.launch' and controllers do not load properly:
+---error says 'Could not load controller 'joint1_velocity_controller' .....etc '
+<<close terminal & reopen>>
+# run each of these:
+sudo apt-get install ros-melodic-joint-state-controller 
+sudo apt-get install ros-melodic-effort-controllers 
+sudo apt-get install ros-melodic-position-controllers 
+
+solution from: https://github.com/qboticslabs/mastering_ros/issues/7
+
